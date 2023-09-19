@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box{
+            height: 500px;
+            width: 400px;
+            border: 1px solid;
+            margin: 0 auto;
+            margin-top: 60px;
+            background-color: black;
+            border-radius: 20px;
+
+
+            
+            
+        }
+        button{
+            width: 80px;
+            height: 60px;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 5px ;
+            
+
+        
+            
+        }
+        .button{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+            box-shadow: 6px,4px,3px white;
+            
+        }
+        #input{
+            height: 150px;
+            width: 392px;
+            border-radius: 12px;
+            text-align: right;
+            background-color: rgb(153, 151, 151);
+            font-size: 60px;
+            color: aliceblue;
+            
+            
+        
+        }
+        .orange{
+            background-color: orange;
+        }
+        #green{
+            background-color: green;
+        }
+        
+        
+        
+    
+        
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div><input type="text" id="input"></div>
+        <br>
+        <div class="button">
+            <button type="button" onclick="display('*')" class="orange" class="value">*</button>
+            <button type="button" onclick="display('/')" class="orange" class="value">/</button>
+            <button type="button" onclick="display('-')" class="orange" class="value">-</button>
+            <button type="button" onclick="display('+')" class="orange" class="value">+</button>
+
+            <button type="button" onclick="display('9')" class="value">9</button>
+            <button type="button" onclick="display('8')" class="value">8</button>
+            <button type="button" onclick="display('7')"class="value">7</button>
+            <button type="button" onclick="display('6')"class="value">6</button>
+
+            <button type="button" onclick="display('5')"class="value">5</button>
+            <button type="button" onclick="display('4')"class="value">4</button>
+            <button type="button" onclick="display('3')"class="value">3</button>
+            <button type="button" onclick="display('2')"class="value">2</button>
+
+            <button type="button" onclick="display('1')"class="value">1</button>
+            <button type="button" onclick="display('0')"class="value">0</button>
+            <button type="button" onclick="Clear()" >C</button>
+            <button type="button" onclick="calculate()"id="green" class="value">=</button>
+
+
+
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById("input");
+        function display(num) {
+            input.value += num
+            
+        }
+        function calculate() {
+            let result =document.getElementById("input")
+            let res =document.getElementsByClassName("value")
+            let ans = eval(result.value)
+            result.value = ans
+            
+            
+        }
+        function Clear() {
+            input.value="";
+            
+        }
+
+       
+       
+        
+            
+        
+        
+            
+        
+
+        
+    </script>
+    
+</body>
+</html>
